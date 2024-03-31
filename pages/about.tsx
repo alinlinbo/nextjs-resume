@@ -12,7 +12,7 @@ const About: NextPage = () => {
   return (
     <div
       onScroll={(e)=>{
-        const top = e.target.scrollTop
+        const top = (e.target as HTMLDivElement).scrollTop
         pageY.set(top)
       }}
       style={{
