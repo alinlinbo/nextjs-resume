@@ -216,7 +216,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
         </div>
         <div
           className={'skills'}>
-          {['jq-logo.png','spring-logo.png','vue-logo.png'].map((src,index) =>
+          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
             <motion.img
               key={src}
               style={{translateY:translateX2.get()*(1+index)+'px'}}
@@ -246,7 +246,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
         </div>
         <div
           className={'skills'}>
-          {['vue-logo.png','react-logo.png','electron-logo.png'].map((src,index) =>
+          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
             <motion.img
               key={src}
               style={{translateY:translateX3.get()*(1+index)+'px'}}
