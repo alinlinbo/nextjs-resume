@@ -50,8 +50,8 @@ const ResumePaper = () => {
         </div>
         <div className={styles.content}>
           <div className={styles['content-head']}>
-            <div>2023.06~2024.03</div>
-            <div>远程工作</div>
+            <div>2023.11~2024.06</div>
+            <div>广东法智时代科技</div>
             <div>web前端</div>
           </div>
           <div>
@@ -65,7 +65,7 @@ const ResumePaper = () => {
           </div>
 
           <div className={styles['content-head']}>
-            <div>20220.08~2023.01</div>
+            <div>2022.08~2023.11</div>
             <div>珠海齐润科技有限公司</div>
             <div>前端开发</div>
           </div>
