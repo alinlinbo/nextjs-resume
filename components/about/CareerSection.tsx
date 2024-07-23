@@ -229,7 +229,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
           2023.11 - 2024.06
         </div>
         <div className={'company-name'}>
-          远程工作
+          广东法智时代科技有限公司
         </div>
         <div className={'job'}>
           Web前端
