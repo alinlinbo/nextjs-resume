@@ -195,7 +195,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
       </CareerBlock>
       <CareerBlock style={{top:blockScroll2}} >
         <div className={'time'}>
-          2022.08 - 2023.01
+          2022.08 - 2023.11
         </div>
         <div className={'company-name'}>
           珠海齐润科技有限公司
@@ -226,7 +226,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
       </CareerBlock>
       <CareerBlock style={{top:blockScroll3}} >
         <div className={'time'}>
-          2023.06 - 2024.03
+          2023.11 - 2024.06
         </div>
         <div className={'company-name'}>
           远程工作
