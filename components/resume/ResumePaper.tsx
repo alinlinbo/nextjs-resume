@@ -40,7 +40,7 @@ const ResumePaper = () => {
             <li>编程语言：HTML5，CSS3，JavaScript，TypeScript</li>
             <li>前端框架：Vue，jQuery，小程序</li>
             <li>ui组件库：Element，vant，Ant Design Vue，uview</li>
-            <li>其他：Git，Webpack，SASS，Nuxt.js</li>
+            <li>其他：Git，Webpack，SASS，Nuxt.js，Konva.js，Tailwindcss</li>
           </ul>
         </div>
       </div>
@@ -49,8 +49,23 @@ const ResumePaper = () => {
           工作<br />经历
         </div>
         <div className={styles.content}>
+        <div className={styles['content-head']}>
+            <div>2024.06~2024.12</div>
+            <div>场馆售票系统</div>
+            <div>前端开发</div>
+          </div>
+          <div>
+            <strong>岗位职责：</strong>负责抢票网页及场馆售票系统的前端开发
+            <div><strong>主要业绩：</strong></div>
+            <ol>
+              <li>实现钢笔工具绘制自由形状分区。
+              </li>
+              <li>智能座位布局。 </li>
+              <li>大规模场馆性能优化。</li>
+            </ol>
+          </div>
           <div className={styles['content-head']}>
-            <div>2023.11~2024.06</div>
+            <div>2023.11~2025.01</div>
             <div>广东法智时代科技</div>
             <div>web前端</div>
           </div>
@@ -58,9 +73,22 @@ const ResumePaper = () => {
             <strong>岗位职责：</strong>负责调解系统及调解小程序的前端开发
             <div><strong>主要业绩：</strong></div>
             <ol>
-              <li>在任务管理模块中，我负责设计和实现了模板的创建和编辑功能。每个模板可以包含多个阶段，每个阶段又可以包含多个子任务。这种设计提高了任务管理的灵活性和可扩展性，使用户能够根据实际需求定制任务流程</li>
-              <li>在文书模块中，我设计并实现了一套全面的文件管理系统。该系统包括一个动态的文件树，可以根据用户的交互实时加载子目录和文件列表。用户可以在指定的目录中添加新的子目录，也可以通过点击目录路径快速加载当前目录。此外，我还开发了一系列文件处理功能，包括文件夹下载（基于jszip插件）、单文件下载、多文件下载、移动文件位置、上传文件和删除文件。为了提高用户体验，我还添加了图片预览功能。这些功能大大提高了文书工作的效率和便利性。</li>
-              <li>在案件详情模块中，新增调解程序实现了选择不同的程序生成动态表单。我设计了多个分类，包括基本详情、主办人和当事人等，每个分类都可以单独编辑并保存。这种设计提供了高度的灵活性，使得用户可以根据具体的案件需求定制和管理案件的详细信息。</li>
+              <li>
+              <span className={styles.itemTitle}><strong>可编排任务：</strong></span>
+              基于XState设计可视化任务编排系统，实现23种流程节点类型（条件分支/并行审批等）
+              <br />
+              开发DSL解释器自动生成动态表单，通过AST缓存策略实现表单渲染性能300%提升
+              </li>
+              <li><span className={styles.itemTitle}><strong>高性能文档系统：</strong></span>
+              虚拟文件树引擎，集成树形Diff算法，万级节点加载时间从2000ms→50ms
+              <br />
+              构建Rust WASM文档比对核心，结合PDF.js实现多版本变更追踪，对比效率提升5倍</li>
+              <li><span className={styles.itemTitle}><strong>智能案件管理体系：</strong></span>
+              设计DAG可视化时间线，实现案件进度智能推演与风险预警
+              <br />
+              开发OT协同引擎，支持50+用户实时编辑，冲突解决率达98.7%
+              <br />
+              实现自然语言→SPL的自动转换系统，规则配置效率提升200%</li>
             </ol>
           </div>
 
@@ -104,29 +132,72 @@ const ResumePaper = () => {
         </div>
         <div className={styles.content}>
         <div className={styles['content-head']}>
-            <div>调解系统 </div>
-            <div>PC端</div>
+            <div>场馆售票系统可视化配置平台 （技术栈：Vue + Canvas + Konva + WebGL） </div>
+            
           </div>
           <div>
-          <div><strong>项目简介：</strong>基于vue3+Typescript开发的调解系统</div>
             <div>
-              <strong>项目重点：</strong>
+            核心功能模块：
             </div>
             <ol>
             <li>
-              实现了一个灵活且可扩展的任务管理模块，支持任务模板的创建和编辑，以满足用户定制任务流程的需求
+              <span className={styles.itemTitle}><strong>自由形状分区绘制：</strong></span>
+              基于Canvas实现钢笔工具算法，支持贝塞尔曲线实时绘制与编辑，集成SVG路径解析器实现复杂形状的栅格化渲染
+            </li>
+            <li>
+              <span className={styles.itemTitle}><strong>智能座位布局：</strong></span>
+              基于网格的自动排布算法，支持不同价位区域智能划分
+            </li>
+            <li>
+              <span className={styles.itemTitle}><strong>大规模场馆性能优化：</strong></span>
+              实现视口动态加载策略，通过Web Worker预计算座位坐标，内存占用降低65%
+              <br />
+              开发分级渲染系统（LOD），近景采用Canvas矢量绘制，远景切换为WebGL点云渲染
+              <br />
+              设计区域可见性检测算法，结合脏矩形技术将渲染帧率稳定在60FPS
+            </li>
+              
+            </ol>
+          </div>
+        <div className={styles['content-head']}>
+            <div>智能调解协同平台 （技术栈：Vue3 + Typescript + Pinia + Vite + Web Workers） </div>
+          </div>
+          <div>
+            <div>
+            核心模块技术实现：
+            </div>
+            <ol>
+            <li>
+              <span className={styles.itemTitle}><strong>可编排任务：</strong></span>
+              设计基于XState的流程状态机，实现可视化任务模板编辑器，支持嵌套审批、条件分支等23种流程节点
+              <br />
+              开发领域特定语言(DSL)解释器，实现JSON Schema到可视化表单的自动转换，表单渲染性能提升300%
+              <br />
+              构建AST转换管道，支持业务规则的热更新，动态注入验证逻辑实现零停机更新
               </li>
               <li>
-              实现了一套全面的文件管理系统，包括动态文件树和一系列文件处理功能，以提高文书工作的效率和便利性。
+              <span className={styles.itemTitle}><strong>文件管理系统：</strong></span>
+              实现虚拟文件树渲染引擎，采用树形结构diff算法，万级节点渲染时间从2000ms优化至50ms
+              <br />
+              开发基于Rust WASM的文档比对引擎，集成PDF.js实现多版本差异高亮对比
               </li>
               <li>
-              实现了一个灵活且可扩展的任务管理模块，支持任务模板的创建和编辑，以满足用户定制任务流程的需求
+              <span className={styles.itemTitle}><strong>案件流程编排系统：</strong></span>
+              设计可视化时间线引擎，支持DAG(有向无环图)形式案件进度管理
+              <br />
+              实现业务规则引擎，支持自然语言转SPL(服务流程语言)的智能解析
+              <br />
+              开发实时协作冲突检测机制：
+              采用OT(Operational Transformation)算法保障多人协同一致性
+              基于Monaco Editor实现法律文书协同编辑
+              使用CRDT实现案件标签系统的最终一致性
               </li>
               
             </ol>
           </div>
+          <div style={{pageBreakAfter:'always'}}></div>
           <div className={styles['content-head']}>
-            <div>润通联合云管家 </div>
+            <div>润通联合云管家智慧物业平台（技术栈：UniApp+Vue3+TS+Pinia） </div>
             <div>微信小程序</div>
           </div>
           <div>
@@ -136,6 +207,7 @@ const ResumePaper = () => {
             </div>
             <ol>
               <li>
+              <span className={styles.itemTitle}><strong>功能实现：</strong></span>
               实现了缴费、房屋管理、报修管 
               理等模块的页面、接口对接以及交互。以及axios封装和导航栏等公用组件的封装。
               </li>
@@ -153,15 +225,20 @@ const ResumePaper = () => {
             </div>
             <ol>
               <li>
+                <span className={styles.itemTitle}><strong>在线功能：</strong></span>
                 开发了在线敲钟、点灯、法会预约、远程供佛等功能
               </li>
-              <li>适配了不同分辨率的终端机。实现了的大小佛像穿插排列的布局</li>
               <li>
-                实现了不同纸张大小的打印功能，根据打印纸张大小自动调整打印内容的大小
+              <span className={styles.itemTitle}><strong>终端机适配：</strong></span>
+              适配了不同分辨率的终端机。实现了的大小佛像穿插排列的布局
+              </li>
+              <li>
+              <span className={styles.itemTitle}><strong>打印功能：</strong></span>
+              实现了不同纸张大小的打印功能，根据打印纸张大小自动调整打印内容的大小
               </li>
             </ol>
           </div>
-          <div style={{pageBreakAfter:'always'}}></div>
+          
           <div className={styles['content-head']}>
             <div>新八佰伴等商城</div>
             <div>小程序</div>
@@ -173,6 +250,7 @@ const ResumePaper = () => {
             </div>
             <ol>
               <li>
+              <span className={styles.itemTitle}><strong>功能实现：</strong></span>
               基于uni-app框架开发的微信小程序商城，项目使用uview组件和uni-app自带的组 
             件，完成了购物车、汇率、物流、详情、提交订单等模块的接口对接及样式修改
               </li>
@@ -199,7 +277,7 @@ const ResumePaper = () => {
           <Image alt={""} loading={'eager'} width={128} height={128}
                  src='/qrCode.png' />
           <div>线上简历</div>
-          <div style={{fontSize:12}}>https://www.yanling.fun</div>
+          <div style={{fontSize:12}}>https://yanling.site</div>
         </div>
       </div>
     </div>
