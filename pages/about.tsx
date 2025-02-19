@@ -7,21 +7,19 @@ import { useMotionValue  } from 'framer-motion'
 import AssessmentSection from '../components/about/AssessmentSection'
 import FootSection from '../components/about/FootSection'
 import Head from 'next/head'
-import { useRef } from 'react'
 
 import { useEffect } from 'react'
 const About: NextPage = () => {
-  const hasShownAlert = useRef(false)
   useEffect(() => {
     // 检测是否在微信浏览器中打开
+    // alert('请在微信以外的浏览器打开')
     const isWeixinBrowser = () => {
       const ua = navigator.userAgent.toLowerCase()
       
       return ua.indexOf('micromessenger') !== -1
     }
-    if (typeof window !== 'undefined' && isWeixinBrowser() && !hasShownAlert.current) {
+    if (typeof window !== 'undefined' && isWeixinBrowser()) {
       alert('请在微信以外的浏览器打开')
-      hasShownAlert.current = true
     }
   }, [])
   const pageY = useMotionValue(0)
