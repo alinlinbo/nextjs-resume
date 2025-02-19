@@ -11,6 +11,9 @@
 .only-print{
   display: none;
 }
+.ml-4{
+  margin-left: 1rem;
+}
 @media print {
   html,
   body {

@@ -132,7 +132,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
     pageY.onChange((y)=>{
       const screenHeight = windowSize.height
       setY(y)
-      const limit = 2*screenHeight - 400
+      const limit = 3*screenHeight - 400
       let percent = 1
       if (y<screenHeight){
         percent = 1
@@ -152,6 +152,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
   const { scrollTop:blockScroll1,translateX:translateX1 } = useScrollTop(0,y,windowSize.height)
   const { scrollTop:blockScroll2,translateX:translateX2 } = useScrollTop(1,y,windowSize.height)
   const { scrollTop:blockScroll3,translateX:translateX3 } = useScrollTop(2,y,windowSize.height)
+  const { scrollTop:blockScroll4,translateX:translateX4 } = useScrollTop(3,y,windowSize.height)
   return<Container>
     <CareerHead>
       <HeadTitle style={{fontSize:TitleSize,height:TitleHeight}}>
@@ -160,6 +161,98 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
     </CareerHead>
     <BlockWrap>
       <CareerBlock style={{top:blockScroll1}} >
+        <div className={'time'}>
+          2024.06 - 2024.12
+        </div>
+        <div className={'company-name'}>
+        演唱会编辑系统，抢票网站 
+        </div>
+        <div className={'job'}>
+          Web前端
+        </div>
+        <div className={'content'}>
+          <div>
+          基于 Nuxt3 + Vue3 开发的现代化演唱会票务管理系统，实现场馆座位图可视化编辑等核心功能。
+          </div>
+          <ol>
+              <li>基于 Canvas 技术栈（Konva/Vue-Konva）实现了复杂的场馆座位图编辑器：支持曲线、多边形等绘图功能，实现了场馆分区、座位布局的可视化配置，提供直观的拖拽式操作界面。</li>
+              <li>采用最新技术栈构建高性能 Web 应用：使用 Nuxt3 实现 SSR，优化首屏加载性能和 SEO，基于 Vue Query 实现高效的数据状态管理，使用 TypeScript 确保代码质量和可维护性</li>
+              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面</li>
+          </ol>
+        </div>
+        <div
+          className={'skills'}>
+          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
+            <motion.img
+              key={src}
+              style={{translateY:translateX3.get()*(1+index)+'px'}}
+              src={'https://septem1997-blog.oss-cn-hangzhou.aliyuncs.com/'+src} />
+          )}
+        </div>
+      </CareerBlock>
+      <CareerBlock style={{top:blockScroll2}} >
+        <div className={'time'}>
+          2023.11 - 2024.06
+        </div>
+        <div className={'company-name'}>
+          广东法智时代科技有限公司
+        </div>
+        <div className={'job'}>
+          Web前端
+        </div>
+        <div className={'content'}>
+          <div>
+            岗位职责：负责调解系统及调解小程序的前端开发
+          </div>
+          <ol>
+              <li>在任务管理模块中，我负责设计和实现了模板的创建和编辑功能。每个模板可以包含多个阶段，每个阶段又可以包含多个子任务。这种设计提高了任务管理的灵活性和可扩展性，使用户能够根据实际需求定制任务流程</li>
+              <li>在文书模块中，我设计并实现了一套全面的文件管理系统。该系统包括一个动态的文件树，可以根据用户的交互实时加载子目录和文件列表。用户可以在指定的目录中添加新的子目录，也可以通过点击目录路径快速加载当前目录。此外，我还开发了一系列文件处理功能，包括文件夹下载（基于jszip插件）、单文件下载、多文件下载、移动文件位置、上传文件和删除文件。为了提高用户体验，我还添加了图片预览功能。这些功能大大提高了文书工作的效率和便利性。</li>
+              <li>在案件详情模块中，新增调解程序实现了选择不同的程序生成动态表单。我设计了多个分类，包括基本详情、主办人和当事人等，每个分类都可以单独编辑并保存。这种设计提供了高度的灵活性，使得用户可以根据具体的案件需求定制和管理案件的详细信息。</li>
+          </ol>
+        </div>
+        <div
+          className={'skills'}>
+          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
+            <motion.img
+              key={src}
+              style={{translateY:translateX3.get()*(1+index)+'px'}}
+              src={'https://septem1997-blog.oss-cn-hangzhou.aliyuncs.com/'+src} />
+          )}
+        </div>
+      </CareerBlock>
+      
+      <CareerBlock style={{top:blockScroll3}} >
+        <div className={'time'}>
+          2022.08 - 2023.11
+        </div>
+        <div className={'company-name'}>
+          珠海齐润科技有限公司
+        </div>
+        <div className={'job'}>
+          Web前端
+        </div>
+        <div className={'content'}>
+          <div>
+            岗位职责：负责物业小程序及关联后台系统的前端开发
+          </div>
+          <ol>
+          <li>使用 uni-app开发了物业小程序，实现了缴费、房屋管理、报修管理等模块的页面、接口对 
+               接以及交互。以及axios封装和导航栏等公用组件的封装。
+          </li>
+          <li>使用 Vue 3开发物业后台管理。 </li>
+          </ol>
+        </div>
+        <div
+          className={'skills'}>
+          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
+            <motion.img
+              key={src}
+              style={{translateY:translateX2.get()*(1+index)+'px'}}
+              src={'https://septem1997-blog.oss-cn-hangzhou.aliyuncs.com/'+src} />
+          )}
+        </div>
+      </CareerBlock>
+      <CareerBlock style={{top:blockScroll4}} >
         <div className={'time'}>
           2021.03 - 2022.07
         </div>
@@ -193,67 +286,8 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
           )}
         </div>
       </CareerBlock>
-      <CareerBlock style={{top:blockScroll2}} >
-        <div className={'time'}>
-          2022.08 - 2023.11
-        </div>
-        <div className={'company-name'}>
-          珠海齐润科技有限公司
-        </div>
-        <div className={'job'}>
-          Web前端
-        </div>
-        <div className={'content'}>
-          <div>
-            岗位职责：负责物业小程序及关联后台系统的前端开发
-          </div>
-          <ol>
-          <li>使用 uni-app开发了物业小程序，实现了缴费、房屋管理、报修管理等模块的页面、接口对 
-               接以及交互。以及axios封装和导航栏等公用组件的封装。
-          </li>
-          <li>使用 Vue 3开发物业后台管理。 </li>
-          </ol>
-        </div>
-        <div
-          className={'skills'}>
-          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
-            <motion.img
-              key={src}
-              style={{translateY:translateX2.get()*(1+index)+'px'}}
-              src={'https://septem1997-blog.oss-cn-hangzhou.aliyuncs.com/'+src} />
-          )}
-        </div>
-      </CareerBlock>
-      <CareerBlock style={{top:blockScroll3}} >
-        <div className={'time'}>
-          2023.11 - 2024.06
-        </div>
-        <div className={'company-name'}>
-          广东法智时代科技有限公司
-        </div>
-        <div className={'job'}>
-          Web前端
-        </div>
-        <div className={'content'}>
-          <div>
-            岗位职责：负责调解系统及调解小程序的前端开发
-          </div>
-          <ol>
-              <li>在任务管理模块中，我负责设计和实现了模板的创建和编辑功能。每个模板可以包含多个阶段，每个阶段又可以包含多个子任务。这种设计提高了任务管理的灵活性和可扩展性，使用户能够根据实际需求定制任务流程</li>
-              <li>在文书模块中，我设计并实现了一套全面的文件管理系统。该系统包括一个动态的文件树，可以根据用户的交互实时加载子目录和文件列表。用户可以在指定的目录中添加新的子目录，也可以通过点击目录路径快速加载当前目录。此外，我还开发了一系列文件处理功能，包括文件夹下载（基于jszip插件）、单文件下载、多文件下载、移动文件位置、上传文件和删除文件。为了提高用户体验，我还添加了图片预览功能。这些功能大大提高了文书工作的效率和便利性。</li>
-              <li>在案件详情模块中，新增调解程序实现了选择不同的程序生成动态表单。我设计了多个分类，包括基本详情、主办人和当事人等，每个分类都可以单独编辑并保存。这种设计提供了高度的灵活性，使得用户可以根据具体的案件需求定制和管理案件的详细信息。</li>
-          </ol>
-        </div>
-        <div
-          className={'skills'}>
-          {['vue-logo.png','wechat-logo.png','miniapp.png'].map((src,index) =>
-            <motion.img
-              key={src}
-              style={{translateY:translateX3.get()*(1+index)+'px'}}
-              src={'https://septem1997-blog.oss-cn-hangzhou.aliyuncs.com/'+src} />
-          )}
-        </div>
-      </CareerBlock>
+      
+      
     </BlockWrap>
   </Container>
 }
