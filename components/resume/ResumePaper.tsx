@@ -90,7 +90,7 @@ const ResumePaper = () => {
             <strong>项目描述：</strong>基于 uni-app 开发的跨平台票务抢票应用。
             <div><strong>核心功能:</strong></div>
             <ol>
-              <li>座位选择：
+              <li>座位渲染:
                 <ul className='ml-4'>
                   <li>设计并实现了支持大规模场馆的动态座位渲染方案，优化了数万座位同屏渲染性能</li>
                   <li>使用 Hammer.js 实现了移动端手势操作，支持多点触控、缩放和旋转等交互</li>
@@ -130,9 +130,8 @@ const ResumePaper = () => {
           </div>
 
           <div className={styles['content-head']}>
-            <div>2022.08~2023.11</div>
             <div>珠海齐润科技有限公司</div>
-            <div>前端开发</div>
+            <div>2022.08~2023.11</div>
           </div>
           <div>
             <strong>岗位职责：</strong>负责物业小程序及关联后台系统的前端开发

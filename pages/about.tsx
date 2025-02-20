@@ -40,7 +40,7 @@ const About: NextPage = () => {
       <IntroSection />
       <CareerSection pageY={pageY} />
       <AssessmentSection pageY={pageY} />
-      <ProjectSection pageY={pageY}/>
+      {/* <ProjectSection pageY={pageY}/> */}
       <FootSection />
     </div>
   )

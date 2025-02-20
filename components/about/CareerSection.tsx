@@ -171,6 +171,7 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
           Web前端
         </div>
         <div className={'content'}>
+          <div>演唱会编辑系统</div>
           <div>
           基于 Nuxt3 + Vue3 开发的现代化演唱会票务管理系统，实现场馆座位图可视化编辑等核心功能。
           </div>
@@ -179,6 +180,10 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
               <li>采用最新技术栈构建高性能 Web 应用：使用 Nuxt3 实现 SSR，优化首屏加载性能和 SEO，基于 Vue Query 实现高效的数据状态管理，使用 TypeScript 确保代码质量和可维护性</li>
               <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面</li>
           </ol>
+          <div>抢票网站</div>
+          <div>
+          基于 uni-app 开发的跨平台票务抢票应用。设计并实现了支持大规模场馆的动态座位渲染方案，优化了数万座位同屏渲染性能,使用 Hammer.js 实现了移动端手势操作，支持多点触控、缩放和旋转等交互,采用节流（throttle）和防抖（debounce）优化触摸事件处理，提升用户交互体验
+          </div>
         </div>
         <div
           className={'skills'}>
