@@ -71,7 +71,13 @@ const ResumePaper = () => {
                   <li>使用 TypeScript 确保代码质量和可维护性</li>
                 </ul>
               </li>
-              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面
+              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面，自定义富文本编辑器满足动态的内容管理需求
+              </li>
+              <li>性能优化：
+              <ul className='ml-4'>
+                  <li>实现图形渲染性能优化：使用计算属性和响应式数据优化重绘逻辑，图形元素的按需渲染和懒加载，通过 nextTick 优化批量 DOM 更新</li>
+                  <li>Canvas 性能优化：实现图形元素的缓存机制，优化拖拽和旋转等高频操作的性能，使用节流和防抖处理密集型用户交互</li>
+                </ul>
               </li>
             </ol>
             <div><strong>主要业绩：</strong></div>
@@ -79,7 +85,7 @@ const ResumePaper = () => {
               <li>实现钢笔工具绘制自由形状分区。
               </li>
               <li>智能座位布局。 </li>
-              <li>大规模场馆性能优化。</li>
+              <li>通过性能优化，实现了大型场馆场景下的流畅操作体验</li>
             </ol>
           </div>
           <div className={styles['content-head']}>
@@ -137,10 +143,19 @@ const ResumePaper = () => {
             <strong>岗位职责：</strong>负责物业小程序及关联后台系统的前端开发
             <div><strong>主要业绩：</strong></div>
             <ol>
-              <li>使用 uni-app开发了物业小程序，实现了缴费、房屋管理、报修管理等模块的页面、接口对 
-                   接以及交互。以及axios封装和导航栏等公用组件的封装。
+              <li>基于 uni-app 开发物业管理小程序
+              <ul className='ml-4'>
+                  <li>设计并实现包含缴费管理、房屋管理、报修工单等核心业务模块</li>
+                  <li>封装 axios 请求库，统一处理请求拦截、响应拦截、错误处理等，提升代码复用性和维护性</li>
+                  <li>开发可复用的自定义组件库，包括导航栏、表单组件等，显著提升开发效率</li>
+                </ul>
               </li>
-              <li>使用 Vue 3开发物业后台管理。 </li>
+              <li>使用 Vue 3 + TypeScript 开发物业后台管理系统
+              <ul className='ml-4'>
+                  <li>采用 Composition API 和 TypeScript 确保代码类型安全和可维护性</li>
+                  <li>实现后台管理系统的用户管理、权限控制、数据统计等功能模块</li>
+                </ul>
+              </li>
             </ol>
           </div>
           <div className={styles['content-head']}>
@@ -151,11 +166,14 @@ const ResumePaper = () => {
             <strong>微信公众号，终端机页面和后台管理系统</strong>
             <div><strong>主要业绩：</strong></div>
             <ol>
-              <li>完善单据打印功能，利用Promise特性解决了打印顺序不同步的问题，封装打印公共方法，降低了同类需求开发成本</li>
-              <li>使用jquery开发微信公众号和微站实现了首页、文章、敲钟、点灯、法会等模块的页面交 
-                互、接口对接和样式，针对业务场景封装底部及顶部导航栏、头部返回等公用组件，提高代 
-                码复用。</li>
-              <li>使用vue和jQuery开发寺院微站后台管理。</li>
+              <li>设计并封装通用打印组件，提升代码复用性，显著降低后续需求开发成本</li>
+              <li>微信公众号及微站前端开发
+              <ul className='ml-4'>
+                  <li>使用 jQuery 开发首页、文章、敲钟、点灯、法会等核心功能模块</li>
+                  <li>封装底部导航栏、顶部返回等高复用性组件，提升开发效率和用户体验</li>
+                </ul>
+              </li>
+              <li>使用vue和jQuery开发寺院微站后台管理。实现文章管理、用户数据统计、活动管理等功能模块</li>
             </ol>
           </div>
         </div>
