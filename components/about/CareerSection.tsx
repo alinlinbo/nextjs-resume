@@ -165,20 +165,20 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
           2024.06 - 2024.12
         </div>
         <div className={'company-name'}>
-        演唱会编辑系统，抢票网站 
+        演唱会编辑系统,抢票网站
         </div>
         <div className={'job'}>
           Web前端
         </div>
         <div className={'content'}>
-          <div>演唱会编辑系统</div>
           <div>
-          基于 Nuxt3 + Vue3 开发的现代化演唱会票务管理系统，实现场馆座位图可视化编辑等核心功能。
+          演唱会编辑系统：基于 Nuxt3 + Vue3 开发的现代化演唱会票务管理系统，实现场馆座位图可视化编辑等核心功能。
           </div>
           <ol>
               <li>基于 Canvas 技术栈（Konva/Vue-Konva）实现了复杂的场馆座位图编辑器：支持曲线、多边形等绘图功能，实现了场馆分区、座位布局的可视化配置，提供直观的拖拽式操作界面。</li>
               <li>采用最新技术栈构建高性能 Web 应用：使用 Nuxt3 实现 SSR，优化首屏加载性能和 SEO，基于 Vue Query 实现高效的数据状态管理，使用 TypeScript 确保代码质量和可维护性</li>
               <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面</li>
+              <li>性能优化：实现图形渲染性能优化，使用计算属性和响应式数据优化重绘逻辑，图形元素的按需渲染和懒加载，通过 nextTick 优化批量 DOM 更新，Canvas 性能优化，实现图形元素的缓存机制，优化拖拽和旋转等高频操作的性能，使用节流和防抖处理密集型用户交互</li>
           </ol>
           <div>抢票网站</div>
           <div>
@@ -241,10 +241,18 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
             岗位职责：负责物业小程序及关联后台系统的前端开发
           </div>
           <ol>
-          <li>使用 uni-app开发了物业小程序，实现了缴费、房屋管理、报修管理等模块的页面、接口对 
-               接以及交互。以及axios封装和导航栏等公用组件的封装。
-          </li>
-          <li>使用 Vue 3开发物业后台管理。 </li>
+          <li>使用 uni-app开发了物业小程序： </li>
+          <ul className='ml-4'>
+                  <li>设计并实现包含缴费管理、房屋管理、报修工单等核心业务模块</li>
+                  <li>封装 axios 请求库，统一处理请求拦截、响应拦截、错误处理等，提升代码复用性和维护性</li>
+                  <li>开发可复用的自定义组件库，包括导航栏、表单组件等，显著提升开发效率</li>
+                </ul>
+                <li>使用 Vue 3 + TypeScript 开发物业后台管理系统
+              <ul className='ml-4'>
+                  <li>采用 Composition API 和 TypeScript 确保代码类型安全和可维护性</li>
+                  <li>实现后台管理系统的用户管理、权限控制、数据统计等功能模块</li>
+                </ul>
+              </li>
           </ol>
         </div>
         <div
