@@ -38,9 +38,12 @@ const ResumePaper = () => {
         <div className={styles.content}>
           <ul>
             <li>编程语言：HTML5，CSS3，JavaScript，TypeScript</li>
-            <li>前端框架：Vue，jQuery，小程序</li>
-            <li>ui组件库：Element，vant，Ant Design Vue，uview</li>
-            <li>其他：Git，Webpack，SASS，Nuxt.js，Konva.js，Tailwindcss</li>
+            <li>前端框架：Vue，jQuery，UniApp</li>
+            <li>ui组件库：Element，vant，Ant Design Vue，uView</li>
+            <li>其他：Git，Webpack，SASS，Nuxt.js，Konva.js，Tailwindcss
+              <br />
+            熟练使用copilot cursor等ai工具
+            </li>
           </ul>
         </div>
       </div>
@@ -54,33 +57,35 @@ const ResumePaper = () => {
             <div>2024.06~2024.12</div>
           </div>
           <div>
-            <strong>项目描述：</strong>基于 Nuxt3 + Vue3 开发的现代化演唱会票务管理系统，实现场馆座位图可视化编辑等核心功能。
+            <strong>项目描述:</strong>基于 Nuxt3 + Vue3 开发的现代化演唱会编辑系统，实现场馆座位图可视化编辑等核心功能。
             <div><strong>技术亮点:</strong></div>
             <ol>
               <li>基于 Canvas 技术栈（Konva/Vue-Konva）实现了复杂的场馆座位图编辑器：
                 <ul className='ml-4'>
-                  <li>支持曲线、多边形等绘图功能</li>
-                  <li>实现了场馆分区、座位布局的可视化配置。</li>
+                  <li>支持四边形、多边形、曲线多边形等绘制：基于三次贝塞尔曲线实现了多点精准控制的绘图功能。</li>
+                  <li>实现了场馆分区、座位布局的可视化配置。其中座位布局兼并自动生成和自定义两种方式，自定义布局实现了一个分区两种票价并且分区按照座位比例显示对应颜色。
+                  分区编辑实现了 旋转、缩放和分区名大小偏移量自定义等、座位布局、座位颜色设置等功能。
+                  </li>
                   <li>提供直观的拖拽式操作界面</li>
                 </ul>
               </li>
               <li>采用最新技术栈构建高性能 Web 应用：
                 <ul className='ml-4'>
-                  <li>使用 Nuxt3 实现 SSR，优化首屏加载性能和 SEO</li>
                   <li>基于 Vue Query 实现高效的数据状态管理</li>
                   <li>使用 TypeScript 确保代码质量和可维护性</li>
-                </ul>
+                  <li>使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面，自定义富文本编辑器（Tiptap）满足动态的内容管理需求</li>
+                </ul> 
               </li>
-              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面，自定义富文本编辑器满足动态的内容管理需求
-              </li>
-              <li>性能优化：
-              <ul className='ml-4'>
+              <li>优化：
+              <ul className='ml-4'> 
+                  <li>图层管理：通过配置对象解决了频繁操作DOM产生大量临时对象引起画面闪烁的问题，并且减少内存使用</li>
                   <li>实现图形渲染性能优化：使用计算属性和响应式数据优化重绘逻辑，图形元素的按需渲染和懒加载，通过 nextTick 优化批量 DOM 更新</li>
-                  <li>Canvas 性能优化：实现图形元素的缓存机制，优化拖拽和旋转等高频操作的性能，使用节流和防抖处理密集型用户交互</li>
+                  <li>交互性能优化：实现图形元素的缓存机制，优化拖拽和旋转等高频操作的性能，使用节流和防抖处理密集型用户交互</li>
+                  <li>文本渲染优化:动态计算最优字体大小</li>
                 </ul>
               </li>
             </ol>
-            <div><strong>主要业绩：</strong></div>
+            <div><strong>主要业绩:</strong></div>
             <ol>
               <li>实现钢笔工具绘制自由形状分区。
               </li>
@@ -88,31 +93,33 @@ const ResumePaper = () => {
               <li>通过性能优化，实现了大型场馆场景下的流畅操作体验</li>
             </ol>
           </div>
+          <div style={{pageBreakAfter:'always'}}></div>
           <div className={styles['content-head']}>
             <div>抢票网站</div>
             <div>2024.06~2024.12</div>
           </div>
           <div>
-            <strong>项目描述：</strong>基于 uni-app 开发的跨平台票务抢票应用。
+            <strong>项目描述:</strong>基于 uni-app 开发的跨平台票务抢票应用。
             <div><strong>核心功能:</strong></div>
             <ol>
               <li>座位渲染:
                 <ul className='ml-4'>
-                  <li>设计并实现了支持大规模场馆的动态座位渲染方案，优化了数万座位同屏渲染性能</li>
+                  <li>通过将座位区域分成多个扇区，只渲染可视区域内的座位，实现了座位的分区渲染，避免一次性渲染所有座位，使得可设置数万座位</li>
+                  <li>使用 Konva 的分层系统，将场馆分为多个图层，拖动和缩放时只更新必要的图层，避免整个画布重绘。根据缩放比例动态调整渲染内容，缩放比例小于 0.45 时不渲染具体座位，提升性能，实现了可视区域的动态计算和更新</li>
                   <li>使用 Hammer.js 实现了移动端手势操作，支持多点触控、缩放和旋转等交互</li>
-                  <li>采用节流（throttle）和防抖（debounce）优化触摸事件处理，提升用户交互体验</li>
+                  <li>采用节流（throttle）和防抖（debounce）处理密集型操作，实现事件委托，减少事件监听器数量，提升用户交互体验</li>
+                  <li>动态计算拖动边界，设置了最大和最小缩放比例，动态计算可拖动的最大范围，防止场馆被拖出视图</li>
                 </ul>
               </li>
-              <li>使用 WebSocket 实现实时票务信息同步，确保多用户同时抢票时的数据一致性
+              <li>多人模式使用 WebSocket 实现实时信息同步，确保多用户同时抢票时的数据一致性
               </li>
             </ol>
-            <div style={{pageBreakAfter:'always'}}></div>
-            <div><strong>项目成果：</strong></div>
-            <ol>
-              <li>实现了高性能的座位渲染和互动体验，支持数万座位的流畅展示
+            <div><strong>项目成果:</strong></div>
+            <ul className={styles['ul-style']}>
+              <li>
+              实现了高性能的座位渲染和互动体验，支持数万座位的流畅展示
               </li>
-              <li>跨平台部署能力显著降低了开发和维护成本 </li>
-            </ol>
+            </ul>
           </div>
           <div className={styles['content-head']}>
             <div>广东法智时代科技</div>

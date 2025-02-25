@@ -176,8 +176,8 @@ const CareerSection = ({pageY}:{pageY:MotionValue<number>})=>{
           </div>
           <ol>
               <li>基于 Canvas 技术栈（Konva/Vue-Konva）实现了复杂的场馆座位图编辑器：支持曲线、多边形等绘图功能，实现了场馆分区、座位布局的可视化配置，提供直观的拖拽式操作界面。</li>
-              <li>采用最新技术栈构建高性能 Web 应用：使用 Nuxt3 实现 SSR，优化首屏加载性能和 SEO，基于 Vue Query 实现高效的数据状态管理，使用 TypeScript 确保代码质量和可维护性</li>
-              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面</li>
+              <li>采用最新技术栈构建高性能 Web 应用：基于 Vue Query 实现高效的数据状态管理，使用 TypeScript 确保代码质量和可维护性</li>
+              <li>现代化的 UI/UX 设计：使用 Tailwindcss 和Naive UI 组件库构建现代化的用户界面,自定义富文本编辑器（Tiptap）满足动态的内容管理需求</li>
               <li>性能优化：实现图形渲染性能优化，使用计算属性和响应式数据优化重绘逻辑，图形元素的按需渲染和懒加载，通过 nextTick 优化批量 DOM 更新，Canvas 性能优化，实现图形元素的缓存机制，优化拖拽和旋转等高频操作的性能，使用节流和防抖处理密集型用户交互</li>
           </ol>
           <div>抢票网站</div>
