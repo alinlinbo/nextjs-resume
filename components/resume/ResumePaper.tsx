@@ -165,6 +165,7 @@ const ResumePaper = () => {
               </li>
             </ol>
           </div>
+          <div style={{pageBreakAfter:'always'}}></div>
           <div className={styles['content-head']}>
             <div>珠海唐佛科技有限公司</div>
             <div>2021.03~2022.07</div>
