@@ -42,7 +42,7 @@ const ResumePaper = () => {
             <li>ui组件库：Element，vant，Ant Design Vue，uView</li>
             <li>其他：Git，Webpack，SASS，Nuxt.js，Konva.js，Tailwindcss
               <br />
-            熟练使用copilot cursor等ai工具
+            熟练使用Copilot,Cursor等Ai工具
             </li>
           </ul>
         </div>
