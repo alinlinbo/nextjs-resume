@@ -77,7 +77,7 @@ const Resume: NextPage = () => {
       {/*todo 转下载*/}
       <a
         target={'_blank'}
-        href={'/resume.pdf'}
+        href={'/陈燕灵-前端开发.pdf'}
         download={true}
         rel="noreferrer"
       >
