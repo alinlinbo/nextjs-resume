@@ -40,16 +40,25 @@ const ResumePaper = () => {
           </div>
           <div className={styles.content}>
             <ul className="space-y-2">
-              <li>熟练掌握 HTML5、CSS3、JavaScript、TypeScript，具备扎实的前端开发基础</li>
-              <li>熟悉 Vue2/3 技术栈及相关全家桶，熟练使用 UniApp 进行跨平台开发</li>
+              <li>
+                熟练掌握
+                HTML5、CSS3、JavaScript、TypeScript，具备扎实的前端开发基础
+              </li>
+              <li>
+                熟悉 Vue2/3 技术栈及相关全家桶，熟练使用 UniApp 进行跨平台开发
+              </li>
               <li>熟悉 Node.js 后端开发，具有 MySQL 数据库开发经验</li>
-              <li>具备前端性能优化经验，熟悉虚拟列表、防抖节流、组件按需加载等渲染优化方案</li>
               <li>
-                具备 Nuxt.js 服务端渲染、Konva.js 图形处理、Tailwind CSS 样式开发经验
+                具备前端性能优化经验，熟悉虚拟列表、防抖节流、组件按需加载等渲染优化方案
               </li>
               <li>
-                高效运用 Copilot、Cursor 等 AI 辅助工具提升开发效率
+                具备 Nuxt.js 服务端渲染、Konva.js 图形处理、Tailwind CSS
+                样式开发经验
               </li>
+              <li>
+                高效运用 Google、StackOverflow、GitHub等平台解决工作中遇到的问题
+              </li>
+              <li>高效运用 DeepSeek、Copilot、Cursor(付费用户) 等 AI 辅助工具提升开发效率</li>
             </ul>
           </div>
         </div>
@@ -274,34 +283,6 @@ const ResumePaper = () => {
                 </li>
               </ol>
             </div>
-          </div>
-        </div>
-
-        <div className={styles.section}>
-          <div className={styles.title}>
-            自我
-            <br />
-            评价
-          </div>
-          <div className={styles.content} style={{ border: 'none' }}>
-            <ul>
-              <li>
-                热爱编程，善于利用编程解决生活中遇到的问题，能主动学习并不断更新自身技能
-              </li>
-              <li>
-                多年 JavaScript(TypeScript )以及响应式网站开发经验，熟练掌握
-                ES6+/CSS 3新特性
-              </li>
-              <li>
-                熟练掌握Vue全家桶，熟悉uni-app，小程序开发，有uni-app项目开发经验
-              </li>
-              <li>
-                良好的产品审美，能独立、按时按量完成工作任务，并协助他人工作，勇于沟通
-              </li>
-              <li>
-                能熟练使用Google、StackOverflow、GitHub等平台解决工作中遇到的问题
-              </li>
-            </ul>
           </div>
         </div>
         <div className={styles.qrCode}>
